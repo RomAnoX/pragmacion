@@ -1,0 +1,17 @@
+{
+  "name": "pragmacion",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "test": "node -r esm test.js",
+    "start": "electron ."
+  },
+  "dependencies": {
+    "codemirror": "^5.50.0",
+    "esm": "^3.2.25"
+  },
+  "devDependencies": {
+    "electron": "^7.1.7"
+  }
+}
