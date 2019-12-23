@@ -1,21 +1,29 @@
-Lista de cosas por hacer:
+# Etapas de desarrollo
 
-- _Crear la definicion del lenguaje_ (Listo)
-- **Crear el parser del lenguaje**
-- Crear la aplicacion (IDE) para ejecutar el lenguaje
+## Primera Fase: Prueba de concepto
 
-Para la aplicacion (IDE) utilizar [Electron](https://electronjs.org/).
+### Teoria
 
-Realizar el parser por etapas:
+- [x] Agregar definicion
+- [x] primer AST
 
-- Primera etapa:
-  - valores primitivos
-  - declaracion de variables
-  - variables primitivas
-  - asignacion de valores
-  - imprimir
-  - leer
-- Segunda Etapa:
-  - _POR DEFINIR_
+### Compilador
 
-Crear IDE basico al finalizar la primera parte del parser.
+- [x] Agregar lexico
+- [x] Agregar sintaxis
+  - [x] imprimir
+- [ ] Agregar generador de codigo
+  - [ ] imprimir
+
+### Editor
+
+- [x] Agregar Electron al proyecto
+- [x] Crear la primera interfaz con CodeMirror
+- [x] Crear la sintaxis
+  - [x] imprimir
+  - [x] variables
+  - [x] numeros
+  - [x] strings
+  - [x] boleanos
+- [ ] Ejecucion
+  - [ ] imprimir "Hola Mundo"

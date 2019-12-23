@@ -1,6 +1,6 @@
 {
   "name": "pragmacion",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "main": "index.js",
   "license": "MIT",
   "scripts": {
@@ -12,6 +12,7 @@
     "esm": "^3.2.25"
   },
   "devDependencies": {
-    "electron": "^7.1.7"
+    "electron": "^7.1.7",
+    "electron-prompt": "^1.4.0"
   }
 }

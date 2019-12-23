@@ -1,15 +1,17 @@
 import parser from "./Compiler/Parser";
 import generator from "./Compiler/Generator";
 import StreamError from "./Compiler/Stream/StreamError";
+import helpers from "./Compiler/Generator/headers/console";
 
 const code = `
-imprimir "Hola Mundo"
-imprimir "Este es nuestro primer programa"
+# este es un comentario
+imprimir "Hola Mundo ", "este es el ", 1, "er programa ", verdadero
 `;
+
 try {
   const node = parser(code);
   const result = generator(node);
-  eval(result);
+  eval([helpers, result].join("\n"));
 } catch (err) {
   if (err instanceof StreamError) {
     console.error(`ERROR: ${err.message}`);

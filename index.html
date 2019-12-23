@@ -1,32 +1,27 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8" />
-    <title>Pragmaci&oacute;n - Aprender Algoritmos</title>
-    <link rel="stylesheet" href="codemirror.css" />
-  </head>
 
-  <body>
-    <h1>Hello World!</h1>
-    <textarea id="ide"></textarea>
-    <!-- All of the Node.js APIs are available in this renderer process. -->
-    We are using Node.js
-    <script>
-      document.write(process.versions.node);
-    </script>
-    , Chromium
-    <script>
-      document.write(process.versions.chrome);
-    </script>
-    , and Electron
-    <script>
-      document.write(process.versions.electron);
-    </script>
-    .
+<head>
+  <meta charset="UTF-8" />
+  <title>Pragmaci&oacute;n - Aprender Algoritmos</title>
+  <link rel="stylesheet" href="styles/codemirror.css" />
+  <link rel="stylesheet" href="styles/base16-dark.css" />
+  <link rel="stylesheet" href="styles/butterCake.min.css" />
+  <link rel="stylesheet" href="styles/base.css" />
+</head>
 
-    <script>
-      // You can also require other files to run in this process
-      require("./middleware");
-    </script>
-  </body>
+<body>
+  <textarea id="ide"></textarea>
+  <div id="console" class="bg-secondary text-light w-100 h-100 p-1">
+    <button id="execute" class="btn rounded primary">Ejecutar</button>
+    <div id="output"></div>
+  </div>
+
+  <!-- All of the Node.js APIs are available in this renderer process. -->
+  <script>
+    // You can also require other files to run in this process
+    require("./middleware");
+  </script>
+</body>
+
 </html>

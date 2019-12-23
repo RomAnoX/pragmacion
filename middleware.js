@@ -1,2 +1,2 @@
 require = require("esm")(module);
-require("./renderer.js");
+require("./IDE/renderer");
