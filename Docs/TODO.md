@@ -1,6 +1,6 @@
 # Etapas de desarrollo
 
-## Primera Fase: Prueba de concepto
+## Primera Fase: Prueba de concepto (2019-12-23)
 
 ### Teoria
 
@@ -12,8 +12,8 @@
 - [x] Agregar lexico
 - [x] Agregar sintaxis
   - [x] imprimir
-- [ ] Agregar generador de codigo
-  - [ ] imprimir
+- [x] Agregar generador de codigo
+  - [x] imprimir
 
 ### Editor
 
@@ -25,5 +25,24 @@
   - [x] numeros
   - [x] strings
   - [x] boleanos
-- [ ] Ejecucion
-  - [ ] imprimir "Hola Mundo"
+- [x] Ejecucion
+  - [x] imprimir "Hola Mundo"
+
+## Segunda Fase: declaracion de variables
+
+### Compilador
+
+- [ ] Parser
+  - [ ] tabla de simbolos
+  - [ ] tipo de datos
+  - [ ] declaracion de variables
+  - [ ] leer
+- [ ] Generator
+  - [ ] declaracion de variables
+  - [ ] leer variables
+
+### Editor
+
+- [ ] Ejecutar
+  - [ ] declaracion de variables
+  - [ ] leer variables
