@@ -1,0 +1,122 @@
+/*
+
+    Name:       Pragma Theme
+    Author:     Ulises Acosta (http://github.com/RomAnoX)
+
+*/
+
+.cm-s-pragma-theme.CodeMirror {
+  background: #485358;
+  color: #ffffff;
+}
+
+.cm-s-pragma-theme div.CodeMirror-selected {
+  background: #303030;
+}
+
+.cm-s-pragma-theme .CodeMirror-line::selection,
+.cm-s-pragma-theme .CodeMirror-line>span::selection,
+.cm-s-pragma-theme .CodeMirror-line>span>span::selection {
+  background: rgba(48, 48, 48, 0.99);
+}
+
+.cm-s-pragma-theme .CodeMirror-line::-moz-selection,
+.cm-s-pragma-theme .CodeMirror-line>span::-moz-selection,
+.cm-s-pragma-theme .CodeMirror-line>span>span::-moz-selection {
+  background: rgba(48, 48, 48, 0.99);
+}
+
+.cm-s-pragma-theme .CodeMirror-gutters {
+  background: #485358;
+  border-right: 2px solid #414c51;
+  border-top: 1px solid #3f4a4f;
+  width: 52px;
+}
+
+.cm-s-pragma-theme .CodeMirror-sizer {
+  border-top: 1px solid #3f4a4f;
+  margin-left: 65px !important;
+  padding-top: 10px;
+}
+
+.cm-s-pragma-theme .CodeMirror-guttermarker {
+  color: #ac4142;
+}
+
+.cm-s-pragma-theme .CodeMirror-guttermarker-subtle {
+  color: #505050;
+}
+
+.cm-s-pragma-theme .CodeMirror-linenumber {
+  color: #dbdbdb;
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+.cm-s-pragma-theme .CodeMirror-cursor {
+  border-left: 1px solid #b0b0b0;
+}
+
+.cm-s-pragma-theme span.cm-comment {
+  color: #baa547;
+}
+
+.cm-s-pragma-theme span.cm-atom {
+  color: #4a9de3;
+}
+
+.cm-s-pragma-theme span.cm-number {
+  color: #d28147;
+}
+
+.cm-s-pragma-theme span.cm-property,
+.cm-s-pragma-theme span.cm-attribute {
+  color: #22c35d;
+}
+
+.cm-s-pragma-theme span.cm-keyword {
+  color: #ce7071;
+  font-weight: bold;
+}
+
+.cm-s-pragma-theme span.cm-string {
+  color: #27be5d;
+}
+
+.cm-s-pragma-theme span.cm-variable {
+  color: #fafafa;
+}
+
+.cm-s-pragma-theme span.cm-variable-2 {
+  color: #6a9fb5;
+}
+
+.cm-s-pragma-theme span.cm-def {
+  color: #d28445;
+}
+
+.cm-s-pragma-theme span.cm-bracket {
+  color: #e0e0e0;
+}
+
+.cm-s-pragma-theme span.cm-tag {
+  color: #ac4142;
+}
+
+.cm-s-pragma-theme span.cm-link {
+  color: #aa759f;
+}
+
+.cm-s-pragma-theme span.cm-error {
+  background: #ac4142;
+  color: #b0b0b0;
+}
+
+.cm-s-pragma-theme .CodeMirror-activeline-background {
+  background: #202020;
+}
+
+.cm-s-pragma-theme .CodeMirror-matchingbracket {
+  text-decoration: underline;
+  color: white !important;
+}

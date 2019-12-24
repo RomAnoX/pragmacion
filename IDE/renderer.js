@@ -9,24 +9,30 @@ import StreamError from "../Compiler/Stream/StreamError";
 const area = document.getElementById("ide");
 const execute = document.getElementById("execute");
 
-const cm = CodeMirror.fromTextArea(area, {
+const cm = CodeMirror(area, {
   lineNumbers: true,
-  theme: "base16-dark",
-  mode: "pragmacion",
+  theme: "abcdef",
+  mode: "pragma",
 });
+
+window.editor = cm;
 
 execute.addEventListener("click", () => {
   const __OUTPUT = document.getElementById("output");
   __OUTPUT.innerHTML = ""; // clean the results page
+  console.log("Parsing: ", cm.getValue());
 
   output(cm, __OUTPUT)
     .then(() => {
-      cm.focus();
       console.log("Done");
     })
     .catch(err => {
       if (err instanceof StreamError) {
-        const lines = [`ERROR: ${err.message}`];
+        const { line, col } = err;
+        const lines = [
+          `ERROR: ${err.message}`,
+          `Linea: ${line}, Columna: ${col}`,
+        ];
         lines
           .map(text => {
             const line = document.createElement("p");
@@ -34,11 +40,10 @@ execute.addEventListener("click", () => {
             return line;
           })
           .forEach(line => __OUTPUT.appendChild(line));
-        const { line, col: ch } = error;
-        cm.getDoc().setSelection({ line, ch });
-        cm.getDoc().focus();
       } else {
-        throw err;
+        const line = document.createElement("p");
+        line.appendChild(document.createTextNode(err.message));
+        __OUTPUT.appendChild(line);
       }
     });
 });

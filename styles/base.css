@@ -1,9 +1,69 @@
-#console {
-  position: absolute;
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
 }
 
-#execute {
+.header {
+  background-color: #383F44;
+  padding-right: 12px;
+}
+
+.header .logo img {
+  margin: 12px 15px;
+}
+
+.execute {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.content {
+  flex: 1;
+  position: relative;
+  margin: 0 !important;
+}
+
+.CodeMirror {
   position: absolute;
-  right: 10px;
-  top: -20px;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+}
+
+.CodeMirror-gutters {
+  width: 52px;
+  background-color: #383F44 !important;
+}
+
+.CodeMirror-sizer {
+  margin-left: 65px !important;
+  padding-top: 10px;
+}
+
+.CodeMirror-linenumber {
+  margin-left: 10px;
+}
+
+footer {
+  height: 200px;
+  background-color: #383F44;
+}
+
+.console-header {
+  background-color: #293134;
+  padding: 8px 12px;
+  box-shadow: 1px 1px 0 rgba(0, 0, 0, .1), inset 0 0 0 1px rgba(0, 0, 0, .1);
+}
+
+.console {
+  padding: 20px;
+  font-size: 14px;
+  font-family: monospace;
+}
+
+.cm-error {
+  background-color: red;
 }

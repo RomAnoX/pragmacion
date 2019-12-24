@@ -1,7 +1,7 @@
 import CodeMirror from "codemirror";
 import "./addons/simple";
 
-CodeMirror.defineSimpleMode("pragmacion", {
+CodeMirror.defineSimpleMode("pragma", {
   // The start state contains the rules that are intially used
   start: [
     // The regex matches the token, the token property contains the type
@@ -15,7 +15,7 @@ CodeMirror.defineSimpleMode("pragmacion", {
     // Rules are matched in the order in which they appear, so there is
     // no ambiguity between this one and the one above
     {
-      regex: /(?:imprimir|leer)\b/,
+      regex: /(?:imprimir|leer|numero|texto|booleano)\b/,
       token: "keyword",
     },
     { regex: /verdadero|falso/, token: "atom" },
@@ -32,16 +32,7 @@ CodeMirror.defineSimpleMode("pragmacion", {
     // { regex: /[\{\[\(]/, indent: true },
     // { regex: /[\}\]\)]/, dedent: true },
     { regex: /[a-z$][\w$]*/, token: "variable" },
-    // You can embed other modes with the mode property. This rule
-    // causes all code between << and >> to be highlighted with the XML
-    // mode.
-    // { regex: /<</, token: "meta", mode: { spec: "xml", end: />>/ } },
   ],
-  // The multi-line comment state.
-  // comment: [
-  //   { regex: /.*?\*\//, token: "comment", next: "start" },
-  //   { regex: /.*/, token: "comment" },
-  // ],
   // The meta property contains global information about the mode. It
   // can contain properties like lineComment, which are supported by
   // all modes, and also directives like dontIndentStates, which are

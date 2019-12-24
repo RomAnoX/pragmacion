@@ -33,7 +33,7 @@
 ### Compilador
 
 - [ ] Parser
-  - [ ] tabla de simbolos
+  - [x] tabla de simbolos
   - [ ] tipo de datos
   - [ ] declaracion de variables
   - [ ] leer
@@ -43,6 +43,10 @@
 
 ### Editor
 
+- [x] Disenio
+  - [x] Reemplazar buttercake with Bulma
+  - [x] Aplicar un disenio al editor
+  - [x] Cambiar de logo
 - [ ] Ejecutar
   - [ ] declaracion de variables
   - [ ] leer variables

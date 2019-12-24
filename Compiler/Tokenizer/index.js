@@ -2,10 +2,8 @@ import Stream from "../Stream";
 import next from "./next";
 
 class Tokenizer {
-  constructor(code = null) {
-    if (code) {
-      Stream.code = code;
-    }
+  start(code) {
+    Stream.code = code;
     this.current = null;
   }
 
