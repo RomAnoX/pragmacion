@@ -64,6 +64,8 @@ footer {
   font-family: monospace;
 }
 
-.cm-error {
-  background-color: red;
+.console pre {
+  background-color: transparent;
+  color: inherit;
+  padding: 0;
 }

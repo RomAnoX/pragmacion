@@ -7,7 +7,7 @@ export default {
     const body = [];
     while (!input.eof()) {
       body.push(Instruction.parse());
-      if (!input.eof()) Punctuation.skip("\n");
+      if (!input.eof()) Punctuation.maybe("\n");
     }
     return { type: "prog", body };
   },

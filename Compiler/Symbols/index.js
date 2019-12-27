@@ -5,12 +5,16 @@ class Symbols {
     this.list = {};
   }
 
+  clear() {
+    this.list = {};
+  }
+
   add(symbol, type) {
     if (this.list[symbol.value]) {
       const dataType = symbol.type === "var" ? "variable" : "funcion";
       Stream.fail(`La ${dataType} "${symbol.value}" ya esta definida`);
     }
-    this.list[symbol.value] = { type: type.value, pos: Stream.position() };
+    this.list[symbol.value] = { type, pos: Stream.position() };
   }
 
   failIfExist(symbol) {

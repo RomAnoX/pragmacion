@@ -3,17 +3,30 @@
 ## Short
 
 ```javascript
+prog   { type: "prog", body: [ AST... ] }
 num    { type: "num", value: NUMBER }
 str    { type: "str", value: STRING }
-bool   { type: "bool", value: true or false }
+bool   { type: "bool", value: BOOL }
 var    { type: "var", value: NAME }
+print  { type: "print", args: [PARAMS] }
+assign { type: "assign", left: VAR, right: EXP }
+exp    { type: "exp" value: EXP }
+
 lambda { type: "lambda", args: [ NAME... ], body: AST }
 call   { type: "call", value: NAME, args: [ AST... ] }
 if     { type: "if", value: AST, then: AST, else: AST }
-create { type: "create", value: DATA_TYPES, body: AST }
-assign { type: "assign", operator: "=", left: AST, right: AST }
-binary { type: "binary", operator: OPERATOR, left: AST, right: AST }
-prog   { type: "prog", prog: [ AST... ] }
+```
+
+```
+AST       any AST rule
+NUMBER    decimal or number
+STRING    any string
+BOOL      true or false
+NAME      any string
+VALUE     NUMBER or STRING or BOOL or var
+PARAMS    list of VALUES separated by commas
+OP        operators including '(' and ')'
+EXP       array of VALUES and OP
 ```
 
 ## Examples
@@ -43,7 +56,7 @@ falso -> { type: "bool", value: false }
 foo -> { type: "var", value: "foo" }
 ```
 
-### Functions (`lambda`)
+### Functions (`lambda`) TBD
 
 ```javascript
 funcion saludar parametros x ejecutar
@@ -64,7 +77,7 @@ fin
 }
 ```
 
-### Function calls (`call`)
+### Function calls (`call`) TBD
 
 ```javascript
 imprimir a, 1
@@ -79,7 +92,7 @@ imprimir a, 1
 }
 ```
 
-### Conditionals (`si`)
+### Conditionals (`si`) TBD
 
 ```javascript
 si foo entonces bar sino baz fin
@@ -92,18 +105,6 @@ si foo entonces bar sino baz fin
 }
 ```
 
-### Create (`create`)
-
-```javascript
-numero edad;
-
--> {
-  type: "create",
-  data: "int",
-  body: { type: "var", value: "edad" }
-}
-```
-
 ### Assignment (`assign`)
 
 ```javascript
@@ -111,65 +112,39 @@ a = 10
 
 -> {
   type: "assign",
-  operator: "=",
   left: { type: "var", value: "a" },
-  right: { type: "num", value: 10 },
+  right: {
+    type: "exp",
+    value: [{
+      type: "num",
+      value: 10,
+    }],
+  },
 }
 ```
 
-### Binary expressions (`binary`)
+### Expressions (`exp`)
 
 ```javascript
 x + y * z
 
 -> {
-  type: "binary",
-  operator: "+",
-  left: { type: "var", value: "x" },
-  right: {
-    type: "binary",
-    operator: "*",
-    left: { type: "var", value: "y" },
-    right: { type: "var", value: "z" },
-  }
-}
-```
-
-### Sequences (`prog`)
-
-```javascript
-{
-  a = 5;
-  b = a * 2;
-  a + b;
-}
-
--> {
-  type: "prog",
-  body: [
-    {
-      type: "assign",
-      operator: "=",
-      left: { type: "var", value: "a" },
-      right: { type: "num", value: 5 }
-    },
-    {
-      "type": "assign",
-      "operator": "=",
-      "left": { "type": "var", "value": "b" },
-      "right": {
-        "type": "binary",
-        "operator": "*",
-        "left": { "type": "var", "value": "a" },
-        "right": { "type": "num", "value": 2 }
-      }
-    },
-    {
-      "type": "binary",
-      "operator": "+",
-      "left": { "type": "var", "value": "a" },
-      "right": { "type": "var", "value": "b" }
-    }
-  ]
+  type: "exp",
+  value: [{
+    type: "var",
+    value: "x",
+  },{
+    type: "op",
+    value: "+",
+  },{
+    type: "var",
+    value: "y",
+  },{
+    type: "op",
+    value: "*",
+  }, {
+    type: "var",
+    value: "z"
+  }]
 }
 ```

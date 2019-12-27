@@ -15,7 +15,7 @@ CodeMirror.defineSimpleMode("pragma", {
     // Rules are matched in the order in which they appear, so there is
     // no ambiguity between this one and the one above
     {
-      regex: /(?:imprimir|leer|numero|texto|booleano)\b/,
+      regex: /(?:imprimir|leer|numero|texto|boleano)\b/,
       token: "keyword",
     },
     { regex: /verdadero|falso/, token: "atom" },

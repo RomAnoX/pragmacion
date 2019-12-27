@@ -11,4 +11,9 @@ export default {
     }
     input.next();
   },
+  maybe(punc) {
+    if (this.is(punc)) {
+      input.next();
+    }
+  },
 };

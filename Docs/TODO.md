@@ -34,11 +34,11 @@
 
 - [ ] Parser
   - [x] tabla de simbolos
-  - [ ] tipo de datos
-  - [ ] declaracion de variables
+  - [x] tipo de datos
+  - [x] declaracion de variables
   - [ ] leer
 - [ ] Generator
-  - [ ] declaracion de variables
+  - [x] declaracion de variables
   - [ ] leer variables
 
 ### Editor
@@ -48,5 +48,5 @@
   - [x] Aplicar un disenio al editor
   - [x] Cambiar de logo
 - [ ] Ejecutar
-  - [ ] declaracion de variables
+  - [x] declaracion de variables
   - [ ] leer variables
