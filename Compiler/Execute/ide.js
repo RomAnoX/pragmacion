@@ -1,13 +1,11 @@
-import __READ from "electron-prompt";
-import ide from "../Compiler/Generator/headers/ide";
-import parser from "../Compiler/Parser";
-import generator from "../Compiler/Generator";
-import StreamError from "../Compiler/Stream/StreamError";
+import ide from "../Generator/headers/ide";
+import parser from "../Parser";
+import generator from "../Generator";
+import StreamError from "../Stream/StreamError";
 
-export default (cm, __OUTPUT) => {
+export default (code, __OUTPUT, __READ) => {
   __OUTPUT.clear();
   try {
-    const code = cm.getValue();
     const tree = parser(code);
     const result = generator(tree);
     const content = [ide, result].join("\n");

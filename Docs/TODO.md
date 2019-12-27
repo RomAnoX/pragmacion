@@ -1,52 +1,5 @@
-# Etapas de desarrollo
-
-## Primera Fase: Prueba de concepto (2019-12-23)
-
-### Teoria
-
-- [x] Agregar definicion
-- [x] primer AST
-
-### Compilador
-
-- [x] Agregar lexico
-- [x] Agregar sintaxis
-  - [x] imprimir
-- [x] Agregar generador de codigo
-  - [x] imprimir
-
-### Editor
-
-- [x] Agregar Electron al proyecto
-- [x] Crear la primera interfaz con CodeMirror
-- [x] Crear la sintaxis
-  - [x] imprimir
-  - [x] variables
-  - [x] numeros
-  - [x] strings
-  - [x] boleanos
-- [x] Ejecucion
-  - [x] imprimir "Hola Mundo"
-
-## Segunda Fase: declaracion de variables
-
-### Compilador
-
-- [ ] Parser
-  - [x] tabla de simbolos
-  - [x] tipo de datos
-  - [x] declaracion de variables
-  - [ ] leer
-- [ ] Generator
-  - [x] declaracion de variables
-  - [ ] leer variables
-
-### Editor
-
-- [x] Disenio
-  - [x] Reemplazar buttercake with Bulma
-  - [x] Aplicar un disenio al editor
-  - [x] Cambiar de logo
-- [ ] Ejecutar
-  - [x] declaracion de variables
-  - [ ] leer variables
+- [x] Instruccion Leer
+- [ ] Mejoras en los errores de generacion de codigo
+- [ ] Errores de tipo de datos en symbolos
+- [ ] Mejorar la lectura de tipo de variables como boleanas
+- [ ] Agregar la instruccion SI SINO FIN

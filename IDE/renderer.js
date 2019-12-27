@@ -2,9 +2,10 @@
 // be executed in the renderer process for that window.
 // All of the Node.js APIs are available in this process.
 // import { log } from "console";
+import __READ from "electron-prompt";
 import CodeMirror from "./syntax";
-import output from "./output";
 import printer from "./printer";
+import output from "../Compiler/Execute/ide";
 
 const area = document.getElementById("ide");
 const execute = document.getElementById("execute");
@@ -17,7 +18,5 @@ const cm = CodeMirror(area, {
 });
 
 execute.addEventListener("click", () => {
-  output(cm, __OUTPUT)
-    .then(() => console.log("Done"))
-    .catch(err => __OUTPUT.log(err.message));
+  output(cm.getValue(), __OUTPUT, __READ);
 });
