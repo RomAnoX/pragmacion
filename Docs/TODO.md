@@ -1,5 +1,23 @@
+- [x] Crear lexer
+- [x] Crear parser
+- [x] Manejo de errores
+- [x] Crear editor
+- [x] Crear generador de codigo
+- [x] Ejecutar instruccion imprimir
+- [x] Ejecutar el primer "Hola Mundo"
+- [x] Agregar declaracion de variables
 - [x] Instruccion Leer
-- [ ] Mejoras en los errores de generacion de codigo
-- [ ] Errores de tipo de datos en symbolos
-- [ ] Mejorar la lectura de tipo de variables como boleanas
-- [ ] Agregar la instruccion SI SINO FIN
+- [x] Mejoras en los errores de generacion de codigo
+- [x] Errores de tipo de datos en symbolos
+- [x] Mejorar la lectura de tipo de variables como boleanas
+- [x] Agregar expresiones a la instruccion imprimir
+- [x] Agregar la instruccion SI SINO FIN
+- [x] Agregar Cmd-Enter on code editor
+- [ ] Hacer la consola resizable o por niveles
+- [ ] Deliberar si agregamos a la consola un boton limpiar
+- [ ] Guardar archivo de codigo
+- [ ] Exportar archivo para ejecutarse en consola
+- [ ] Agregar al editor una pagina de configuracion
+- [ ] Agregar al editor la capacidad de mostrar archivos MD
+- [ ] Agregar el editor una pagina de documentacion
+- [ ] Apollarnos con otros textos

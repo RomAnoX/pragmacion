@@ -1,6 +1,7 @@
 import read from "./read";
 import print from "./print";
 import assign from "./assign";
+import si from "./si";
 import StreamError from "../Stream/StreamError";
 
 export default (lines, node) => {
@@ -14,6 +15,9 @@ export default (lines, node) => {
         break;
       case "read":
         lines.push(read(node));
+        break;
+      case "if":
+        lines.push(si(node));
         break;
       default:
         throw new StreamError(

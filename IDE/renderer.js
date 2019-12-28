@@ -1,7 +1,6 @@
 // This file is required by the index.html file and will
 // be executed in the renderer process for that window.
 // All of the Node.js APIs are available in this process.
-// import { log } from "console";
 import __READ from "electron-prompt";
 import CodeMirror from "./syntax";
 import printer from "./printer";
@@ -15,6 +14,15 @@ const cm = CodeMirror(area, {
   lineNumbers: true,
   theme: "abcdef",
   mode: "pragma",
+  extraKeys: {
+    "Cmd-Enter": codeMirror => {
+      output(codeMirror.getValue(), __OUTPUT, __READ);
+    },
+  },
+});
+
+cm.on("keyHandled", (...args) => {
+  console.log(args);
 });
 
 execute.addEventListener("click", () => {

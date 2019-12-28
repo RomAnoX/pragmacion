@@ -1,5 +1,7 @@
 export const BOOLEANS = ["verdadero", "falso"];
+export const FOLLOWS = ["hacer", "entonces", "ejecutar", "haz"];
 export const KEYWORDS = [
+  ...FOLLOWS,
   "numero",
   "texto",
   "boleano",
@@ -11,9 +13,6 @@ export const KEYWORDS = [
   "leer",
   "para",
   "mientras",
-  "hacer",
-  "ejecutar",
-  "entonces",
   "terminar",
   "regresar",
   "funcion",

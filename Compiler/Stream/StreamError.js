@@ -14,7 +14,7 @@ StreamError.prototype.constructor = StreamError;
 
 StreamError.parse = error => {
   const message = [error.code];
-  const spaces = " ".repeat(error.col - 1);
+  const spaces = error.col ? " ".repeat(error.col - 1) : "";
   message.push(`${spaces}^`);
   return message.join("\n");
 };

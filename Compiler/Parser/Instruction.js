@@ -6,6 +6,7 @@ import Create from "./Create";
 import Variable from "./Variable";
 import Symbols from "../Symbols";
 import Assign from "./Assign";
+import Si from "./Si";
 
 export default {
   unexpected() {
@@ -19,6 +20,7 @@ export default {
     if (Read.is()) return Read.parse();
     if (Print.is()) return Print.parse();
     if (Create.is()) return Create.parse();
+    if (Si.is()) return Si.parse();
     if (Variable.is()) {
       const variable = input.next();
       Symbols.failIfNotExists(variable);
