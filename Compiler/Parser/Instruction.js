@@ -3,6 +3,9 @@ import Punctuation from "./Punctuation";
 import Read from "./Read";
 import Print from "./Print";
 import Create from "./Create";
+import Variable from "./Variable";
+import Symbols from "../Symbols";
+import Assign from "./Assign";
 
 export default {
   unexpected() {
@@ -16,6 +19,11 @@ export default {
     if (Read.is()) return Read.parse();
     if (Print.is()) return Print.parse();
     if (Create.is()) return Create.parse();
+    if (Variable.is()) {
+      const variable = input.next();
+      Symbols.failIfNotExists(variable);
+      return Assign.parse(variable);
+    }
 
     this.unexpected();
   },

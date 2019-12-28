@@ -11,12 +11,13 @@ export default {
     if (!this.is()) {
       input.fail("Se esperaba leer");
     }
-    input.next();
+    const tok = input.next();
     const variable = Variable.parse();
     Symbols.failIfNotExists(variable);
     return {
       type: "read",
       value: variable,
+      pos: tok.pos,
     };
   },
 };

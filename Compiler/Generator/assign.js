@@ -1,6 +1,8 @@
+import StreamError from "../Stream/StreamError";
+
 export default node => {
   const code = [`${node.left.value} = `];
-  const notValid = ["&", "|", "="];
+  const boolOps = ["&", "|", "="];
   node.right.value.forEach(arg => {
     let value = arg.value;
     if (arg.type === "str") {
@@ -9,8 +11,9 @@ export default node => {
     if (arg.type === "bool") {
       value = value ? '"verdadero"' : '"falso"';
     }
-    if (notValid.includes(value)) {
-      throw new Error(`El operador "${value}" no es valido`);
+    if (boolOps.includes(value)) {
+      value = `${value}${value}`;
+      // throw new StreamError(`El operador "${value}" no es valido`, node.pos);
     }
     code.push(`${value}`);
   });

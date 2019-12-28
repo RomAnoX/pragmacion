@@ -10,10 +10,11 @@ export default {
     if (!this.is()) {
       input.fail("Se esperaba imprimir");
     }
-    input.next();
+    const tok = input.next();
     return {
       type: "print",
       args: Parameters.parse(),
+      pos: tok.pos,
     };
   },
 };

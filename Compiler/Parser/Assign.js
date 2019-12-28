@@ -1,5 +1,6 @@
 import input from "../Tokenizer";
 import Expression from "./Expression";
+import token from "../Tokenizer/token";
 
 export default {
   is() {
@@ -10,11 +11,12 @@ export default {
     if (!this.is()) {
       return null;
     }
-    input.next();
+    const tok = input.next();
     return {
       type: "assign",
       left: variable,
       right: Expression.parse(),
+      pos: tok.pos,
     };
   },
   parse(variable) {

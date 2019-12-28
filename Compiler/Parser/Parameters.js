@@ -1,12 +1,12 @@
 import input from "../Tokenizer";
 import Punctuation from "./Punctuation";
-import Value from "./Value";
+import Expression from "./Expression";
 
 export default {
   parse() {
     const list = [];
     do {
-      list.push(Value.parse());
+      list.push(Expression.parse());
       if (Punctuation.is(",")) {
         Punctuation.skip(",");
       } else {

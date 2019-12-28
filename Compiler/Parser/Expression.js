@@ -31,6 +31,7 @@ export default {
     return {
       type: "exp",
       value: tokens,
+      pos: input.pos,
     };
   },
 };

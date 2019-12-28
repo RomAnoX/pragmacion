@@ -16,12 +16,12 @@ const next = () => {
     comment();
     return next();
   }
-  if (ch == "\n") return token("punc", input.next());
+  if (ch == "\n") return token("punc", input.next(), input.position());
   if (ch == '"') return string();
   if (is.digit(ch)) return number();
   if (is.varStart(ch)) return variable();
-  if (is.punctuation(ch)) return token("punc", input.next());
-  if (is.operator(ch)) return token("op", read(is.operator));
+  if (is.punctuation(ch)) return token("punc", input.next(), input.position());
+  if (is.operator(ch)) return token("op", read(is.operator), input.position());
   input.fail("Caracter desconocido: " + ch);
 };
 

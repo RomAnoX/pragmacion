@@ -21,4 +21,4 @@ const escaped = end => {
   return string.join("");
 };
 
-export default () => token("str", escaped('"'));
+export default () => token("str", escaped('"'), input.position());

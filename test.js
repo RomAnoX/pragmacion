@@ -3,9 +3,9 @@ import execute from "./Compiler/Execute/console";
 const code = `
 # este es un comentario
 numero x
-imprimir "Introduzca un numero"
 leer x
-imprimir "El numero es: ", x
+x = x + 10
+imprimir "La suma es: ",  x
 `;
 
 execute(code);

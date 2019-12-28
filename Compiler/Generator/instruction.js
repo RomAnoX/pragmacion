@@ -1,6 +1,7 @@
 import read from "./read";
 import print from "./print";
 import assign from "./assign";
+import StreamError from "../Stream/StreamError";
 
 export default (lines, node) => {
   if (node) {
@@ -15,7 +16,10 @@ export default (lines, node) => {
         lines.push(read(node));
         break;
       default:
-        throw new Error(`La instruccion "${node.type}" no es reconocida`);
+        throw new StreamError(
+          `La instruccion "${node.type}" no es reconocida`,
+          node.pos,
+        );
     }
   }
 };

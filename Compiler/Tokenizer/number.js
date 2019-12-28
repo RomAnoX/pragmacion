@@ -1,3 +1,4 @@
+import input from "../Stream";
 import token from "./token";
 import read from "./read";
 import is from "./is";
@@ -12,5 +13,5 @@ export default () => {
     }
     return is.digit(ch);
   });
-  return token("num", parseFloat(number));
+  return token("num", parseFloat(number), input.position());
 };
