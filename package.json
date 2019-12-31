@@ -12,6 +12,7 @@
     "bulma": "^0.8.0",
     "codemirror": "^5.50.0",
     "esm": "^3.2.25",
+    "interactjs": "^1.7.3",
     "readline-sync": "^1.4.10"
   },
   "devDependencies": {

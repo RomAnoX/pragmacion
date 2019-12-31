@@ -14,7 +14,7 @@
 - [x] Agregar la instruccion SI SINO FIN
 - [x] Agregar Cmd-Enter on code editor
 - [x] Agregar Fonts al editor
-- [ ] Hacer la consola resizable o por niveles
+- [x] Hacer la consola resizable o por niveles
 - [ ] Deliberar si agregamos a la consola un boton limpiar
 - [ ] Guardar archivo de codigo
 - [ ] Exportar archivo para ejecutarse en consola

@@ -2,6 +2,7 @@
 // be executed in the renderer process for that window.
 // All of the Node.js APIs are available in this process.
 import __READ from "electron-prompt";
+import interact from "interactjs";
 import CodeMirror from "./syntax";
 import printer from "./printer";
 import output from "../Compiler/Execute/ide";
@@ -28,3 +29,30 @@ cm.on("keyHandled", (...args) => {
 execute.addEventListener("click", () => {
   output(cm.getValue(), __OUTPUT, __READ);
 });
+
+interact("footer")
+  .resizable({
+    edges: {
+      top: true,
+      left: false,
+      bottom: false,
+      right: false,
+    },
+    modifiers: [
+      interact.modifiers.restrictSize({
+        max: { height: 400 },
+      }),
+    ],
+  })
+  .on("resizemove", event => {
+    let { y } = event.target.dataset;
+
+    y = parseFloat(y) || 0;
+
+    Object.assign(event.target.style, {
+      height: `${event.rect.height}px`,
+      transform: `translate(${event.deltaRect.left}px, ${event.deltaRect.top}px)`,
+    });
+
+    Object.assign(event.target.dataset, { y });
+  });
