@@ -1,3 +1,13 @@
+@font-face {
+  font-family: AnkaCoder;
+  src: url(../fonts/AnkaCoder.ttf);
+}
+
+@font-face {
+  font-family: DejaVu;
+  src: url(../fonts/DejaVuSansMono.ttf);
+}
+
 body {
   display: flex;
   min-height: 100vh;
@@ -31,6 +41,7 @@ body {
   left: 0;
   right: 0;
   height: 100%;
+  font-family: DejaVu;
 }
 
 .CodeMirror-gutters {
@@ -61,11 +72,12 @@ footer {
 .console {
   padding: 20px;
   font-size: 14px;
-  font-family: monospace;
 }
 
 .console pre {
   background-color: transparent;
   color: inherit;
   padding: 0;
+  font-family: AnkaCoder;
+  font-size: 14px;
 }

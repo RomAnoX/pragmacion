@@ -13,6 +13,7 @@
 - [x] Agregar expresiones a la instruccion imprimir
 - [x] Agregar la instruccion SI SINO FIN
 - [x] Agregar Cmd-Enter on code editor
+- [x] Agregar Fonts al editor
 - [ ] Hacer la consola resizable o por niveles
 - [ ] Deliberar si agregamos a la consola un boton limpiar
 - [ ] Guardar archivo de codigo
@@ -21,3 +22,5 @@
 - [ ] Agregar al editor la capacidad de mostrar archivos MD
 - [ ] Agregar el editor una pagina de documentacion
 - [ ] Apollarnos con otros textos
+- [ ] Agregar nombre de variable en leer
+- [ ] Agregar configuracion al Editor

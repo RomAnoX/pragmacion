@@ -6,6 +6,7 @@ export default node => {
   const elseBody = node.else;
   const lines = [];
   const code = ["if ("];
+  const boolOp = ["=", "&", "|"];
   expression.value.forEach(arg => {
     let value = arg.value;
     if (arg.type === "str") {
@@ -13,6 +14,9 @@ export default node => {
     }
     if (arg.type === "bool") {
       value = value ? '"verdadero"' : '"falso"';
+    }
+    if (boolOp.includes(arg.value)) {
+      value = `${value}${value}`;
     }
     code.push(`${value}`);
   });
