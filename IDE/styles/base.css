@@ -62,6 +62,7 @@ footer {
   height: 200px;
   background-color: #383f44;
   touch-action: none;
+  position: relative;
 }
 
 .console-header {
@@ -73,6 +74,12 @@ footer {
 .console {
   padding: 20px;
   font-size: 14px;
+  overflow: auto;
+  position: absolute;
+  top: 40px;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
 
 .console pre {

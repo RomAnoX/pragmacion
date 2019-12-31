@@ -41,6 +41,7 @@ interact("footer")
     modifiers: [
       interact.modifiers.restrictSize({
         max: { height: 400 },
+        min: { height: 145 },
       }),
     ],
   })
