@@ -15,6 +15,11 @@
 - [x] Agregar Cmd-Enter on code editor
 - [x] Agregar Fonts al editor
 - [x] Hacer la consola resizable o por niveles
+- [x] Agregar el ciclo mientras
+- [ ] Agregar el ciclo ejecutar ... mientras
+- [ ] Agregar el ciclo para
+- [ ] Agregar negacion
+- [ ] Agregar incrementar y decrementar
 - [ ] Deliberar si agregamos a la consola un boton limpiar
 - [ ] Guardar archivo de codigo
 - [ ] Exportar archivo para ejecutarse en consola

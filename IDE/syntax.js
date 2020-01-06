@@ -26,6 +26,10 @@ CodeMirror.defineSimpleMode("pragma", {
       regex: /(?:si|sino|fin|entonces)\b/,
       token: "keyword",
     },
+    {
+      regex: /(?:mientras|hacer|ejecutar|haz)\b/,
+      token: "keyword",
+    },
     { regex: /verdadero|falso/, token: "atom" },
     {
       regex: /0x[a-f\d]+|[-+]?(?:\.\d+|\d+\.?\d*)(?:e[-+]?\d+)?/i,

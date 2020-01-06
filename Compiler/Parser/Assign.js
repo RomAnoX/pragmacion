@@ -1,6 +1,5 @@
 import input from "../Tokenizer";
 import Expression from "./Expression";
-import token from "../Tokenizer/token";
 
 export default {
   is() {

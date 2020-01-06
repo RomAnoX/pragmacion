@@ -3,7 +3,6 @@ import Expression from "./Expression";
 import { FOLLOWS } from "../constants";
 import Instruction from "./Instruction";
 import Punctuation from "./Punctuation";
-import StreamError from "../Stream/StreamError";
 
 export default {
   is() {
@@ -47,7 +46,7 @@ export default {
       }
     }
     if (!this.isEnd()) {
-      input.fail('Se esperaba "fin" para el condicional "Si"');
+      input.fail('Se esperaba "fin" para el condicional "si"');
     }
 
     input.next();

@@ -7,11 +7,12 @@ import Variable from "./Variable";
 import Symbols from "../Symbols";
 import Assign from "./Assign";
 import Si from "./Si";
+import Mientras from "./Mientras";
 
 export default {
   unexpected() {
     if (!input.eof()) {
-      input.fail("Instruccion desconocida: " + JSON.stringify(input.peek()));
+      input.fail("Instruccion desconocida");
     }
   },
   parse() {
@@ -21,6 +22,7 @@ export default {
     if (Print.is()) return Print.parse();
     if (Create.is()) return Create.parse();
     if (Si.is()) return Si.parse();
+    if (Mientras.is()) return Mientras.parse();
     if (Variable.is()) {
       const variable = input.next();
       Symbols.failIfNotExists(variable);

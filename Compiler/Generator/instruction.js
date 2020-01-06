@@ -2,6 +2,7 @@ import read from "./read";
 import print from "./print";
 import assign from "./assign";
 import si from "./si";
+import mientras from "./mientras";
 import StreamError from "../Stream/StreamError";
 
 export default (lines, node) => {
@@ -18,6 +19,9 @@ export default (lines, node) => {
         break;
       case "if":
         lines.push(si(node));
+        break;
+      case "mientras":
+        lines.push(mientras(node));
         break;
       default:
         throw new StreamError(
