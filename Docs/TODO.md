@@ -29,3 +29,7 @@
 - [ ] Apollarnos con otros textos
 - [ ] Agregar nombre de variable en leer
 - [ ] Agregar configuracion al Editor
+
+- [ ] Crear sitio personal
+- [ ] Utilizar [[https://bulmatemplates.github.io/bulma-templates/]]
+- [ ] Aprender Github Pages [[https://help.github.com/en/github/working-with-github-pages]]
