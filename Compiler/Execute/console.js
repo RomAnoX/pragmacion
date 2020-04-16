@@ -7,7 +7,8 @@ import helpers from "../Generator/headers/console";
 export default (code, options = {}) => {
   try {
     const node = parser(code);
-    if (options.debug) console.log(JSON.stringify(node, null, 2));
+    if (options.debug || options.justParse)
+      console.log(JSON.stringify(node, null, 2));
     if (options.justParse) return;
 
     const result = generator(node);

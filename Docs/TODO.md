@@ -21,7 +21,7 @@
 - [ ] Agregar el ciclo ejecutar ... mientras
 - [ ] Agregar el ciclo para
 - [ ] Agregar negacion
-- [ ] Agregar incrementar y decrementar
+- [x] Agregar incrementar y decrementar
 - [ ] Agregar funciones
 - [ ] Agregar arreglos
 - [x] Deliberar si agregamos a la consola un boton limpiar

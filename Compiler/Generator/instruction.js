@@ -3,6 +3,8 @@ import print from "./print";
 import assign from "./assign";
 import si from "./si";
 import mientras from "./mientras";
+import incrementar from "./incrementar";
+import decrementar from "./decrementar";
 import StreamError from "../Stream/StreamError";
 
 export default (lines, node) => {
@@ -22,6 +24,12 @@ export default (lines, node) => {
         break;
       case "mientras":
         lines.push(mientras(node));
+        break;
+      case "incrementar":
+        lines.push(incrementar(node));
+        break;
+      case "decrementar":
+        lines.push(decrementar(node));
         break;
       default:
         throw new StreamError(

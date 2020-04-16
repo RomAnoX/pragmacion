@@ -1,15 +1,15 @@
 import execute from "./Compiler/Execute/console";
 
 const code = `
-numero i = 0
-mientras i < 10 hacer
-  imprimir "Indice: ", i + 1
-  si i = 4 entonces
+numero i = 10
+mientras i > 0 hacer
+  imprimir "Indice: ", i
+  si i = 6 entonces
     imprimir "Ya vamos en la mitad"
   fin
-  i = i + 1
+  decrementar i
 fin
 `;
 
-// execute(code, { debug: true, justParse: true });
-execute(code);
+const justParse = false;
+execute(code, { justParse });

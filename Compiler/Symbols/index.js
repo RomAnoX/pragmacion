@@ -28,6 +28,13 @@ class Symbols {
       Stream.fail(`${symbol.value} no esta definida`);
     }
   }
+
+  failIfNotNumber(symbol) {
+    const variable = this.list[symbol.value];
+    if (!variable || variable.type !== "int") {
+      Stream.fail(`${symbol.value} no es de tipo numero`);
+    }
+  }
 }
 
 export default new Symbols();

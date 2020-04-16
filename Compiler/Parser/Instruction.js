@@ -8,6 +8,8 @@ import Symbols from "../Symbols";
 import Assign from "./Assign";
 import Si from "./Si";
 import Mientras from "./Mientras";
+import Incrementar from "./Incrementar";
+import Decrementar from "./Decrementar";
 
 export default {
   unexpected() {
@@ -23,6 +25,8 @@ export default {
     if (Create.is()) return Create.parse();
     if (Si.is()) return Si.parse();
     if (Mientras.is()) return Mientras.parse();
+    if (Incrementar.is()) return Incrementar.parse();
+    if (Decrementar.is()) return Decrementar.parse();
     if (Variable.is()) {
       const variable = input.next();
       Symbols.failIfNotExists(variable);
