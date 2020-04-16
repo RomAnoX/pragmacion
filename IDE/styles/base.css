@@ -1,26 +1,52 @@
-@font-face {
-  font-family: AnkaCoder;
-  src: url(../fonts/AnkaCoder.ttf);
-}
-
-@font-face {
-  font-family: DejaVu;
-  src: url(../fonts/DejaVuSansMono.ttf);
-}
+@import "./variables.css";
+@import "./codemirror.css";
+@import "./pragma_theme.css";
+@import "./bulma.min.css";
+@import "./bulma-tooltip.min.css";
+@import "./icons.css";
 
 body {
   display: flex;
   min-height: 100vh;
   flex-direction: column;
+  background-color: var(--editor-background);
 }
 
 .header {
-  background-color: #383f44;
-  padding-right: 12px;
+  display: flex;
+  align-items: stretch;
+  background-color: var(--editor-background);
+  -webkit-app-region: drag;
+  -webkit-user-select: none;
 }
 
-.header .logo img {
-  margin: 12px 15px;
+.header .title {
+  color: var(--color-white);
+  text-transform: uppercase;
+  font-size: 14px;
+  padding: 12px 30px;
+  margin-bottom: 0;
+  width: 160px;
+  text-align: center;
+  margin-left: 50px;
+}
+
+.header .toolbar {
+  display: flex;
+  justify-content: flex-end;
+  flex-grow: 1;
+  background-color: var(--color-white);
+  border-radius: 0 0 0 10px;
+  margin-top: 1px;
+}
+
+.header .toolbar .icons {
+  margin-right: 8px;
+}
+
+.header .toolbar .icons button {
+  background-color: var(--color-white);
+  color: var(--color-gray);
 }
 
 .execute {
@@ -34,41 +60,40 @@ body {
   margin: 0 !important;
 }
 
-.CodeMirror {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 100%;
-  font-family: DejaVu;
-}
-
-.CodeMirror-gutters {
-  width: 52px;
-  background-color: #383f44 !important;
-}
-
-.CodeMirror-sizer {
-  margin-left: 65px !important;
-  padding-top: 10px;
-}
-
-.CodeMirror-linenumber {
-  margin-left: 10px;
-}
-
 footer {
+  background-color: var(--console-background);
+}
+
+.console-wrapper {
   height: 200px;
-  background-color: #383f44;
+  background-color: var(--console-background);
   touch-action: none;
   position: relative;
+  border-radius: 10px 0 0 0;
 }
 
 .console-header {
-  background-color: #293134;
-  padding: 8px 12px;
-  box-shadow: 1px 1px 0 rgba(0, 0, 0, 0.1), inset 0 0 0 1px rgba(0, 0, 0, 0.1);
+  background-color: var(--console-background);
+  display: flex;
+  align-items: stretch;
+}
+
+.console-header .title {
+  color: var(--color-white);
+  text-transform: uppercase;
+  font-size: 14px;
+  padding: 12px 30px;
+  margin-bottom: 0;
+  width: 160px;
+  text-align: center;
+}
+
+.console-header .toolbar {
+  display: flex;
+  justify-content: flex-end;
+  flex-grow: 1;
+  background-color: var(--color-white);
+  border-radius: 0 0 0 10px;
 }
 
 .console {
@@ -76,10 +101,10 @@ footer {
   font-size: 14px;
   overflow: auto;
   position: absolute;
-  top: 40px;
+  top: 60px;
   left: 0;
   right: 0;
-  bottom: 0;
+  bottom: 20px;
 }
 
 .console pre {
@@ -88,4 +113,27 @@ footer {
   padding: 0;
   font-family: AnkaCoder;
   font-size: 14px;
+}
+
+.controls {
+  background-color: var(--controls-background);
+  border-radius: 10px 0 0 0;
+  padding: 12px;
+}
+
+.controls button {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 12px;
+  width: 200px;
+  height: 45px;
+}
+
+.controls #save {
+  background-color: var(--color-green);
+}
+
+.controls #open {
+  background-color: var(--color-white);
+  color: var(--color-clear);
 }

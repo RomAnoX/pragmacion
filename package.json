@@ -9,7 +9,7 @@
     "build": "electron-packager ./ pragma --out ./dist --icon ./icon.icns --build-version npm_package_version"
   },
   "dependencies": {
-    "bulma": "^0.8.0",
+    "bulma": "^0.8.2",
     "codemirror": "^5.50.0",
     "esm": "^3.2.25",
     "interactjs": "^1.7.3",

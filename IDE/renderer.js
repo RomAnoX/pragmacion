@@ -8,15 +8,16 @@ import printer from "./printer";
 import output from "../Compiler/Execute/ide";
 
 const area = document.getElementById("ide");
+const clean = document.getElementById("clean");
 const execute = document.getElementById("execute");
 const __OUTPUT = printer(document.getElementById("output"));
 
 const cm = CodeMirror(area, {
   lineNumbers: true,
-  theme: "abcdef",
+  theme: "pragma",
   mode: "pragma",
   extraKeys: {
-    "Cmd-Enter": codeMirror => {
+    "Cmd-Enter": (codeMirror) => {
       output(codeMirror.getValue(), __OUTPUT, __READ);
     },
   },
@@ -30,7 +31,12 @@ execute.addEventListener("click", () => {
   output(cm.getValue(), __OUTPUT, __READ);
 });
 
-interact("footer")
+clean.addEventListener("click", () => {
+  cm.setValue("");
+  cm.clearHistory();
+});
+
+interact(".console-wrapper")
   .resizable({
     edges: {
       top: true,
@@ -45,7 +51,7 @@ interact("footer")
       }),
     ],
   })
-  .on("resizemove", event => {
+  .on("resizemove", (event) => {
     let { y } = event.target.dataset;
 
     y = parseFloat(y) || 0;

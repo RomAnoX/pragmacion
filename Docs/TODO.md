@@ -16,6 +16,7 @@
 - [x] Agregar Fonts al editor
 - [x] Hacer la consola resizable o por niveles
 - [x] Agregar el ciclo mientras
+- [-] Modificar el disenio a la version 2
 - [ ] Agregar el ciclo ejecutar ... mientras
 - [ ] Agregar el ciclo para
 - [ ] Agregar negacion
@@ -33,3 +34,4 @@
 - [ ] Crear sitio personal
 - [ ] Utilizar [[https://bulmatemplates.github.io/bulma-templates/]]
 - [ ] Aprender Github Pages [[https://help.github.com/en/github/working-with-github-pages]]
+- [ ] Utilizar Sapper to create a blog https://www.lookoutitsa.ninja/blog/howthiswasmade/

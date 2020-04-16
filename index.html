@@ -1,54 +1,62 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Pragma</title>
-    <link rel="stylesheet" href="IDE/styles/codemirror.css" />
-    <link rel="stylesheet" href="IDE/styles/abcdef.css" />
-    <link rel="stylesheet" href="IDE/styles/bulma.css" />
-    <link rel="stylesheet" href="IDE/styles/base.css" />
-  </head>
 
-  <body>
-    <nav
-      class="level header is-marginless"
-      role="navigation"
-      aria-label="main navigation"
-    >
-      <div class="level-left">
-        <div class="level-item logo">
-          <img src="./icon.png" alt="Pragma Editor" width="28" height="28" />
-        </div>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pragma</title>
+  <link rel="stylesheet" href="IDE/styles/base.css" />
+</head>
+
+<body>
+  <nav class="header" role="navigation">
+    <h2 class="title">Pragmaci&oacute;n</h2>
+    <div class="toolbar">
+      <div class="icons">
+        <button id="clean" class="button is-white has-tooltip-left" data-tooltip="Reiniciar">
+          <span class="icon is-small">
+            <i class="fa fa-sync-alt"></i>
+          </span>
+        </button>
+        <button id="execute" class="button is-white has-tooltip-left" data-tooltip="Ejecutar">
+          <span class="icon is-small">
+            <i class="fa fa-play"></i>
+          </span>
+        </button>
       </div>
-      <div class="level-right">
-        <div class="level-item">
-          <button id="execute" class="button is-link is-small execute">
-            Ejecutar
-          </button>
-        </div>
-      </div>
-    </nav>
-    <div class="content">
-      <div id="ide"></div>
     </div>
-    <footer id="footer">
-      <div class="level console-header is-marginless has-text-light">
-        <div class="level-left">
-          <div class="level-item">
-            <h5>Consola de Salida</h5>
-          </div>
-        </div>
+  </nav>
+  <div class="content">
+    <div id="ide"></div>
+  </div>
+  <footer id="footer">
+    <div class="console-wrapper">
+      <div class="console-header">
+        <h2 class="title">Ejecuci&oacute;n</h2>
+        <div class="toolbar"></div>
       </div>
       <div id="console" class="console has-text-light">
         <div id="output"></div>
       </div>
-    </footer>
+    </div>
+    <div class="level controls">
+      <div class="level-left"></div>
+      <div class="level-right">
+        <div class="level-item">
+          <button id="save" class="button is-primary is-rounded">Guardar Archivo</button>
+        </div>
+        <div class="level-item">
+          <button id="open" class="button is-rounded">Abrir Archivo</button>
+        </div>
+      </div>
+    </div>
+  </footer>
 
-    <!-- All of the Node.js APIs are available in this renderer process. -->
-    <script>
-      // You can also require other files to run in this process
-      require("./middleware");
-    </script>
-  </body>
+  <!-- All of the Node.js APIs are available in this renderer process. -->
+  <script>
+    // You can also require other files to run in this process
+    require("./middleware");
+  </script>
+</body>
+
 </html>
