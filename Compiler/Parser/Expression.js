@@ -23,6 +23,9 @@ export default {
       } else if (tok.type === "var") {
         Symbols.failIfNotExists(tok);
       }
+      if (tok.value === "<>") {
+        tok.value = "!==";
+      }
       tokens.push(tok);
     }
     if (groups !== 0) {

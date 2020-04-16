@@ -16,19 +16,22 @@
 - [x] Agregar Fonts al editor
 - [x] Hacer la consola resizable o por niveles
 - [x] Agregar el ciclo mientras
-- [-] Modificar el disenio a la version 2
+- [x] Modificar el disenio a la version 2
+- [x] Agregar <> y remover ^
 - [ ] Agregar el ciclo ejecutar ... mientras
 - [ ] Agregar el ciclo para
 - [ ] Agregar negacion
 - [ ] Agregar incrementar y decrementar
-- [ ] Deliberar si agregamos a la consola un boton limpiar
+- [ ] Agregar funciones
+- [ ] Agregar arreglos
+- [x] Deliberar si agregamos a la consola un boton limpiar
 - [ ] Guardar archivo de codigo
 - [ ] Exportar archivo para ejecutarse en consola
 - [ ] Agregar al editor una pagina de configuracion
 - [ ] Agregar al editor la capacidad de mostrar archivos MD
-- [ ] Agregar el editor una pagina de documentacion
+- [ ] Agregar al editor una pagina de documentacion
 - [ ] Apollarnos con otros textos
-- [ ] Agregar nombre de variable en leer
+- [x] Agregar nombre de variable en leer
 - [ ] Agregar configuracion al Editor
 
 - [ ] Crear sitio personal

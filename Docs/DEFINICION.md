@@ -75,7 +75,6 @@ Los operadores matematicos son:
 - `*` _multiplicaci&oacute;n_
 - `/` _division_
 - `%` _residuo_
-- `^` _potenciaci&oacute;n_
 
 ```javascript
 5 + 3;

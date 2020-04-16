@@ -1,10 +1,12 @@
 import execute from "./Compiler/Execute/console";
 
 const code = `
-numero x = 10
-numero i = 1
-mientras i <= x hacer
-  imprimir "El indice es: ", i
+numero i = 0
+mientras i < 10 hacer
+  imprimir "Indice: ", i + 1
+  si i = 4 entonces
+    imprimir "Ya vamos en la mitad"
+  fin
   i = i + 1
 fin
 `;

@@ -1,27 +1,15 @@
 import instruction from "./instruction";
 
-export default node => {
-  const expression = node.value;
+import expression from "./expression";
+
+export default (node) => {
   const body = node.body;
   const lines = [];
   const code = ["while ("];
-  const boolOp = ["=", "&", "|"];
-  expression.value.forEach(arg => {
-    let value = arg.value;
-    if (arg.type === "str") {
-      value = `"${value}"`;
-    }
-    if (arg.type === "bool") {
-      value = value ? '"verdadero"' : '"falso"';
-    }
-    if (boolOp.includes(arg.value)) {
-      value = `${value}${value}`;
-    }
-    code.push(`${value}`);
-  });
+  expression(node.value.value, code);
   code.push(") {");
   lines.push(code.join(""));
-  body.filter(Boolean).forEach(line => instruction(lines, line));
+  body.filter(Boolean).forEach((line) => instruction(lines, line));
   lines.push("}");
   return lines.join("\n");
 };
