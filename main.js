@@ -1,5 +1,5 @@
 // Modules to control application life and create native browser window
-import { app, BrowserWindow, Tray } from "electron";
+import { app, BrowserWindow } from "electron";
 
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
@@ -11,8 +11,10 @@ function createWindow() {
   mainWindow = new BrowserWindow({
     width: 800,
     height: 600,
+    minWidth: 800,
+    minHeight: 600,
     icon: "./icon.png",
-    titleBarStyle: "hiddenInset",
+    frame: false,
     webPreferences: {
       nodeIntegration: true,
     },

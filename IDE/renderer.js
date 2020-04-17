@@ -1,6 +1,7 @@
 // This file is required by the index.html file and will
 // be executed in the renderer process for that window.
 // All of the Node.js APIs are available in this process.
+import { remote } from "electron";
 import __READ from "electron-prompt";
 import interact from "interactjs";
 import CodeMirror from "./syntax";
@@ -8,8 +9,11 @@ import printer from "./printer";
 import output from "../Compiler/Execute/ide";
 
 const area = document.getElementById("ide");
-const clean = document.getElementById("clean");
-const execute = document.getElementById("execute");
+const minBtn = document.getElementById("min-btn");
+const maxBtn = document.getElementById("max-btn");
+const closeBtn = document.getElementById("close-btn");
+const cleanBtn = document.getElementById("clean");
+const executeBtn = document.getElementById("execute");
 const __OUTPUT = printer(document.getElementById("output"));
 
 const cm = CodeMirror(area, {
@@ -27,13 +31,32 @@ cm.on("keyHandled", (...args) => {
   console.log(args);
 });
 
-execute.addEventListener("click", () => {
-  output(cm.getValue(), __OUTPUT, __READ);
+minBtn.addEventListener("click", () => {
+  const window = remote.getCurrentWindow();
+  window.minimize();
 });
 
-clean.addEventListener("click", () => {
+maxBtn.addEventListener("click", () => {
+  const window = remote.getCurrentWindow();
+  if (!window.isMaximized()) {
+    window.maximize();
+  } else {
+    window.unmaximize();
+  }
+});
+
+closeBtn.addEventListener("click", () => {
+  const window = remote.getCurrentWindow();
+  window.close();
+});
+
+cleanBtn.addEventListener("click", () => {
   cm.setValue("");
   cm.clearHistory();
+});
+
+executeBtn.addEventListener("click", () => {
+  output(cm.getValue(), __OUTPUT, __READ);
 });
 
 interact(".console-wrapper")

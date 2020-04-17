@@ -20,6 +20,89 @@ body {
   -webkit-user-select: none;
 }
 
+.header .window-buttons {
+  -webkit-app-region: no-drag;
+  position: fixed;
+  top: 6px;
+  left: 14px;
+}
+
+.header .window-buttons .window-btn {
+  width: 11px;
+  height: 11px;
+  line-height: 8px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-left: 2px;
+  font-size: 9pt;
+  font-weight: bold;
+  text-align: center;
+}
+
+.header .window-buttons:hover a {
+  visibility: visible !important;
+}
+
+.header .window-buttons .close {
+  background: #ff5c5c;
+  border: 1px solid #e33e41;
+}
+
+.header .window-buttons .close:active {
+  background: #c14645;
+  border: 1px solid #b03537;
+}
+
+.header .window-buttons .close:active a {
+  color: #4e0002;
+}
+
+.close a#close-btn {
+  color: #820005;
+  visibility: hidden;
+  cursor: default;
+}
+
+.header .window-buttons .minimize {
+  background: #ffbd4c;
+  border: 1px solid #e09e3e;
+}
+
+.header .window-buttons .minimize:active {
+  background: #c08e38;
+  border: 1px solid #af7c33;
+}
+
+.header .window-buttons .minimize:active a {
+  color: #5a2607;
+}
+
+.minimize a#min-btn {
+  color: #9a5518;
+  visibility: hidden;
+  cursor: default;
+}
+
+.header .window-buttons .maximize {
+  background: #00ca56;
+  border: 1px solid #14ae46;
+}
+
+.header .window-buttons .maximize:active {
+  background: #029740;
+  border: 1px solid #128435;
+}
+
+.header .window-buttons .maximize:active a {
+  color: #003107;
+}
+
+.maximize a#max-btn {
+  color: #006519;
+  visibility: hidden;
+  cursor: default;
+}
+
 .header .title {
   color: var(--color-white);
   text-transform: uppercase;
