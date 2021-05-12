@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "bulma": "^0.8.2",
-    "codemirror": "^5.50.0",
+    "codemirror": "^5.58.2",
     "esm": "^3.2.25",
     "interactjs": "^1.7.3",
     "readline-sync": "^1.4.10"
